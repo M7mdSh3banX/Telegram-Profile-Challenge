@@ -1,115 +1,411 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@color/md_theme_light_onBackground"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/app_bar_container"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="@dimen/zero_dimens">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/app_bar_container"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_pic"
+            app:layout_constraintBottom_toBottomOf="@id/app_bar_container"
+            app:layout_constraintEnd_toEndOf="@id/app_bar_container"
+            app:layout_constraintStart_toStartOf="@id/app_bar_container"
+            app:layout_constraintTop_toTopOf="@id/app_bar_container" />
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="@id/app_bar_container"
+            app:layout_constraintTop_toTopOf="@id/app_bar_container"
+            app:tint="@color/md_theme_light_onTertiary" />
+
+        <ImageView
+            android:id="@+id/ic_more_vert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_more_vert"
+            app:layout_constraintEnd_toEndOf="@id/app_bar_container"
+            app:layout_constraintTop_toTopOf="@id/app_bar_container"
+            app:tint="@color/md_theme_light_onPrimary" />
+
+        <ImageView
+            android:id="@+id/ic_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_more_vert"
+            app:layout_constraintEnd_toStartOf="@+id/ic_more_vert"
+            app:layout_constraintTop_toTopOf="@+id/ic_more_vert"
+            app:tint="@color/md_theme_light_onPrimary" />
+
+        <ImageView
+            android:id="@+id/ic_qr_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_qr_code"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_search"
+            app:layout_constraintEnd_toStartOf="@+id/ic_search"
+            app:layout_constraintTop_toTopOf="@+id/ic_search"
+            app:tint="@color/md_theme_light_onPrimary" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/zero_dimens"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/profile_name"
+            android:textColor="@color/md_theme_light_onPrimary"
+            android:textSize="@dimen/font_28"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/profile_status"
+            app:layout_constraintStart_toStartOf="@id/app_bar_container" />
+
+        <TextView
+            android:id="@+id/profile_status"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/zero_dimens"
+            android:layout_marginBottom="16dp"
+            android:text="@string/profile_status"
+            android:textColor="@color/md_theme_light_surface"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintBottom_toBottomOf="@id/app_bar_container"
+            app:layout_constraintStart_toStartOf="@id/profile_name" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:contentDescription="@string/adding_profile_photo"
+            android:src="@drawable/ic_add_a_photo"
+            app:backgroundTint="#2AABEE"
+            app:layout_constraintBottom_toBottomOf="@id/app_bar_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_container"
+            app:shapeAppearanceOverlay="@style/floatingActionButtonStyle" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_container">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1D2733"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_16">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/account"
+                    android:textColor="#2AABEE"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/phone_number"
+                        android:textColor="@color/md_theme_light_onPrimary"
+                        android:textSize="@dimen/font_16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/phone_number_desc"
+                        android:textColor="@color/md_theme_light_outline"
+                        android:textSize="@dimen/font_14" />
+
+                    <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/username"
+                            android:textColor="@color/md_theme_light_onPrimary"
+                            android:textSize="@dimen/font_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/username_desc"
+                            android:textColor="@color/md_theme_light_outline"
+                            android:textSize="@dimen/font_14" />
+
+                        <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/bio"
+                                android:textColor="@color/md_theme_light_onPrimary"
+                                android:textSize="@dimen/font_16" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/bio_desc"
+                                android:textColor="@color/md_theme_light_outline"
+                                android:textSize="@dimen/font_14" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:background="#1D2733"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_16">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/account"
+                    android:textColor="#2AABEE"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/phone_number"
+                        android:textColor="@color/md_theme_light_onPrimary"
+                        android:textSize="@dimen/font_16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/phone_number_desc"
+                        android:textColor="@color/md_theme_light_outline"
+                        android:textSize="@dimen/font_14" />
+
+                    <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/username"
+                            android:textColor="@color/md_theme_light_onPrimary"
+                            android:textSize="@dimen/font_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/username_desc"
+                            android:textColor="@color/md_theme_light_outline"
+                            android:textSize="@dimen/font_14" />
+
+                        <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/bio"
+                                android:textColor="@color/md_theme_light_onPrimary"
+                                android:textSize="@dimen/font_16" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/bio_desc"
+                                android:textColor="@color/md_theme_light_outline"
+                                android:textSize="@dimen/font_14" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:background="#1D2733"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_16">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/account"
+                    android:textColor="#2AABEE"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/phone_number"
+                        android:textColor="@color/md_theme_light_onPrimary"
+                        android:textSize="@dimen/font_16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/phone_number_desc"
+                        android:textColor="@color/md_theme_light_outline"
+                        android:textSize="@dimen/font_14" />
+
+                    <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/username"
+                            android:textColor="@color/md_theme_light_onPrimary"
+                            android:textSize="@dimen/font_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/username_desc"
+                            android:textColor="@color/md_theme_light_outline"
+                            android:textSize="@dimen/font_14" />
+
+                        <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/bio"
+                                android:textColor="@color/md_theme_light_onPrimary"
+                                android:textSize="@dimen/font_16" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/bio_desc"
+                                android:textColor="@color/md_theme_light_outline"
+                                android:textSize="@dimen/font_14" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:contentDescription="@null"
-        android:scaleType="centerCrop"
-        android:src="@drawable/profile_pic"
-        app:layout_constraintBottom_toBottomOf="@id/app_bar_container"
-        app:layout_constraintEnd_toEndOf="@id/app_bar_container"
-        app:layout_constraintStart_toStartOf="@id/app_bar_container"
-        app:layout_constraintTop_toTopOf="@id/app_bar_container" />
-
-    <ImageView
-        android:id="@+id/ic_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@null"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_back"
-        app:layout_constraintStart_toStartOf="@id/app_bar_container"
-        app:layout_constraintTop_toTopOf="@id/app_bar_container"
-        app:tint="@color/md_theme_light_onTertiary" />
-
-    <ImageView
-        android:id="@+id/ic_more_vert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="@null"
-        android:src="@drawable/ic_more_vert"
-        app:layout_constraintEnd_toEndOf="@id/app_bar_container"
-        app:layout_constraintTop_toTopOf="@id/app_bar_container"
-        app:tint="@color/md_theme_light_onPrimary" />
-
-    <ImageView
-        android:id="@+id/ic_search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:contentDescription="@null"
-        android:src="@drawable/ic_search"
-        app:layout_constraintBottom_toBottomOf="@+id/ic_more_vert"
-        app:layout_constraintEnd_toStartOf="@+id/ic_more_vert"
-        app:layout_constraintTop_toTopOf="@+id/ic_more_vert"
-        app:tint="@color/md_theme_light_onPrimary" />
-
-    <ImageView
-        android:id="@+id/ic_qr_code"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:contentDescription="@null"
-        android:src="@drawable/ic_qr_code"
-        app:layout_constraintBottom_toBottomOf="@+id/ic_search"
-        app:layout_constraintEnd_toStartOf="@+id/ic_search"
-        app:layout_constraintTop_toTopOf="@+id/ic_search"
-        app:tint="@color/md_theme_light_onPrimary" />
-
-    <TextView
-        android:id="@+id/profile_name"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/zero_dimens"
-        android:layout_marginStart="16dp"
-        android:text="@string/profile_name"
-        android:textColor="@color/md_theme_light_onPrimary"
-        android:textSize="@dimen/font_28"
-        android:textStyle="bold"
-        android:fontFamily="@font/poppins_medium"
-        app:layout_constraintBottom_toTopOf="@id/profile_status"
-        app:layout_constraintStart_toStartOf="@id/app_bar_container" />
-
-    <TextView
-        android:id="@+id/profile_status"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/zero_dimens"
-        android:layout_marginBottom="16dp"
-        android:text="@string/profile_status"
-        android:textColor="@color/md_theme_light_surface"
-        android:textSize="@dimen/font_16"
-        app:layout_constraintBottom_toBottomOf="@id/app_bar_container"
-        app:layout_constraintStart_toStartOf="@id/profile_name" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_action_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_16"
-        android:src="@drawable/ic_add_a_photo"
-        app:layout_constraintBottom_toBottomOf="@id/app_bar_container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:shapeAppearanceOverlay="@style/floatingActionButtonStyle"
-        app:layout_constraintTop_toBottomOf="@id/app_bar_container"
-        android:contentDescription="@string/adding_profile_photo" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
