@@ -40,8 +40,8 @@
     <style name="dividerStyle" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/divider_height</item>
-        <item name="android:layout_marginBottom">@dimen/margin_4</item>
-        <item name="android:layout_marginTop">@dimen/margin_4</item>
+        <item name="android:layout_marginBottom">@dimen/margin_12</item>
+        <item name="android:layout_marginTop">@dimen/margin_12</item>
         <item name="dividerColor">@color/md_theme_light_onBackground</item>
     </style>
 

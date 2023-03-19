@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbars="none"
     android:background="@color/md_theme_light_onBackground"
+    android:scrollbars="none"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -113,12 +113,11 @@
             android:layout_marginEnd="@dimen/margin_16"
             android:contentDescription="@string/adding_profile_photo"
             android:src="@drawable/ic_add_a_photo"
-            app:backgroundTint="#2AABEE"
+            app:backgroundTint="@color/md_theme_light_tertiary"
             app:layout_constraintBottom_toBottomOf="@id/app_bar_container"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/app_bar_container"
             app:shapeAppearanceOverlay="@style/floatingActionButtonStyle" />
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -140,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/account"
-                    android:textColor="#2AABEE"
+                    android:textColor="@color/md_theme_light_tertiary"
                     android:textSize="@dimen/font_16"
                     android:textStyle="bold" />
 
@@ -171,7 +170,6 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_4"
                         android:orientation="vertical">
 
                         <TextView
@@ -195,7 +193,6 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/margin_4"
                             android:orientation="vertical">
 
                             <TextView
@@ -230,85 +227,116 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_8"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="@string/account"
-                    android:textColor="#2AABEE"
+                    android:text="@string/settings"
+                    android:textColor="@color/md_theme_light_tertiary"
                     android:textSize="@dimen/font_16"
                     android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_4"
-                    android:orientation="vertical">
+                    android:drawablePadding="@dimen/margin_16"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/notifications_and_sounds"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textSize="@dimen/font_16"
+                    app:drawableStartCompat="@drawable/ic_notifications"
+                    app:drawableTint="@color/md_theme_light_outline" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/phone_number"
-                        android:textColor="@color/md_theme_light_onPrimary"
-                        android:textSize="@dimen/font_16" />
+                <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/phone_number_desc"
-                        android:textColor="@color/md_theme_light_outline"
-                        android:textSize="@dimen/font_14" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_16"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/privacy_and_security"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textSize="@dimen/font_16"
+                    app:drawableStartCompat="@drawable/ic_lock"
+                    app:drawableTint="@color/md_theme_light_outline" />
 
-                    <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
+                <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_4"
-                        android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_16"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/data_and_storage"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textSize="@dimen/font_16"
+                    app:drawableStartCompat="@drawable/ic_storage"
+                    app:drawableTint="@color/md_theme_light_outline" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/username"
-                            android:textColor="@color/md_theme_light_onPrimary"
-                            android:textSize="@dimen/font_16" />
+                <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/username_desc"
-                            android:textColor="@color/md_theme_light_outline"
-                            android:textSize="@dimen/font_14" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_16"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/chat_settings"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textSize="@dimen/font_16"
+                    app:drawableStartCompat="@drawable/ic_chat"
+                    app:drawableTint="@color/md_theme_light_outline" />
 
-                        <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
+                <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/margin_4"
-                            android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_16"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/stickers_and_emoji"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textSize="@dimen/font_16"
+                    app:drawableStartCompat="@drawable/ic_emoji"
+                    app:drawableTint="@color/md_theme_light_outline" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="@string/bio"
-                                android:textColor="@color/md_theme_light_onPrimary"
-                                android:textSize="@dimen/font_16" />
+                <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="@string/bio_desc"
-                                android:textColor="@color/md_theme_light_outline"
-                                android:textSize="@dimen/font_14" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_16"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/chat_folders"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textSize="@dimen/font_16"
+                    app:drawableStartCompat="@drawable/ic_folder"
+                    app:drawableTint="@color/md_theme_light_outline" />
 
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
+                <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_16"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/devices"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textSize="@dimen/font_16"
+                    app:drawableStartCompat="@drawable/ic_devices"
+                    app:drawableTint="@color/md_theme_light_outline" />
+
+                <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_16"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/language"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textSize="@dimen/font_16"
+                    app:drawableStartCompat="@drawable/ic_language"
+                    app:drawableTint="@color/md_theme_light_outline" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -322,90 +350,83 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_16"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/telegram_premium"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textSize="@dimen/font_16"
+                    app:drawableStartCompat="@drawable/ic_star"
+                    app:drawableTint="#9C27B0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:background="#1D2733"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_16">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_8"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="@string/account"
-                    android:textColor="#2AABEE"
+                    android:text="@string/help"
+                    android:textColor="@color/md_theme_light_tertiary"
                     android:textSize="@dimen/font_16"
                     android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_4"
-                    android:orientation="vertical">
+                    android:drawablePadding="@dimen/margin_16"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/ask_a_question"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textSize="@dimen/font_16"
+                    app:drawableStartCompat="@drawable/ic_notifications"
+                    app:drawableTint="@color/md_theme_light_outline" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/phone_number"
-                        android:textColor="@color/md_theme_light_onPrimary"
-                        android:textSize="@dimen/font_16" />
+                <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/phone_number_desc"
-                        android:textColor="@color/md_theme_light_outline"
-                        android:textSize="@dimen/font_14" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_16"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/telegram_faq"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textSize="@dimen/font_16"
+                    app:drawableStartCompat="@drawable/ic_question_mark"
+                    app:drawableTint="@color/md_theme_light_outline" />
 
-                    <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
+                <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_4"
-                        android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_16"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textSize="@dimen/font_16"
+                    app:drawableStartCompat="@drawable/ic_police"
+                    app:drawableTint="@color/md_theme_light_outline" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/username"
-                            android:textColor="@color/md_theme_light_onPrimary"
-                            android:textSize="@dimen/font_16" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/username_desc"
-                            android:textColor="@color/md_theme_light_outline"
-                            android:textSize="@dimen/font_14" />
-
-                        <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/margin_4"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="@string/bio"
-                                android:textColor="@color/md_theme_light_onPrimary"
-                                android:textSize="@dimen/font_16" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="@string/bio_desc"
-                                android:textColor="@color/md_theme_light_outline"
-                                android:textSize="@dimen/font_14" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
             </LinearLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/footer_sentence"
+                android:gravity="center"
+                android:layout_margin="@dimen/margin_16"
+                android:textColor="@color/md_theme_light_outline"
+                android:textSize="@dimen/font_12" />
         </LinearLayout>
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>
