@@ -45,5 +45,12 @@
         <item name="dividerColor">@color/md_theme_light_onBackground</item>
     </style>
 
-    <dimen name="divider_height">1dp</dimen>
+    <style name="appBarIconsStyle" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_16</item>
+        <item name="android:layout_marginTop">@dimen/margin_16</item>
+        <item name="android:tint">@color/md_theme_light_onTertiary</item>
+    </style>
+
 </resources>

@@ -20,4 +20,6 @@
     <dimen name="font_28">28sp</dimen>
     <dimen name="font_32">32sp</dimen>
 
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="app_bar_container_height">350dp</dimen>
 </resources>
