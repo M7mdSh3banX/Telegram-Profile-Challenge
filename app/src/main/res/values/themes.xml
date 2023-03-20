@@ -29,7 +29,7 @@
         <item name="colorPrimaryInverse">@color/md_theme_dark_inversePrimary</item>
         <!-- Status bar color. -->
         <item name="android:windowLightStatusBar">false</item>
-        <item name="android:statusBarColor">@color/md_theme_light_onPrimaryContainer</item>
+        <item name="android:statusBarColor">@color/md_theme_light_onBackground</item>
     </style>
 
     <style name="floatingActionButtonStyle" parent="">

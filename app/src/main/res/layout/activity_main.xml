@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_view"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/md_theme_light_onBackground"
-    android:scrollbars="none"
+    app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
 
@@ -19,7 +20,8 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/profile_pic"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:contentDescription="@null"
@@ -62,6 +64,7 @@
         android:layout_marginEnd="24dp"
         android:contentDescription="@null"
         android:src="@drawable/ic_search"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/ic_more_vert"
         app:layout_constraintEnd_toStartOf="@+id/ic_more_vert"
         app:layout_constraintTop_toTopOf="@+id/ic_more_vert"
@@ -117,6 +120,7 @@
         app:shapeAppearanceOverlay="@style/floatingActionButtonStyle" />
 
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
         android:layout_height="@dimen/zero_dimens"
         android:scrollbars="none"
@@ -436,4 +440,4 @@
 
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>
