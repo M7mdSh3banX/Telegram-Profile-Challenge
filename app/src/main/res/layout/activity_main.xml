@@ -9,7 +9,6 @@
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/app_bar_container"
         android:layout_width="match_parent"
@@ -136,20 +135,12 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/phone_number"
-                        android:textColor="@color/md_theme_light_onPrimary"
-                        android:textSize="@dimen/font_16" />
+                        style="@style/generalTextSubtitleStyle"
+                        android:text="@string/phone_number" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/phone_number_desc"
-                        android:textColor="@color/md_theme_light_outline"
-                        android:textSize="@dimen/font_14" />
+                        style="@style/generalTextHintStyle"
+                        android:text="@string/phone_number_desc" />
 
                     <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
@@ -159,20 +150,12 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/username"
-                            android:textColor="@color/md_theme_light_onPrimary"
-                            android:textSize="@dimen/font_16" />
+                            style="@style/generalTextSubtitleStyle"
+                            android:text="@string/username" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/username_desc"
-                            android:textColor="@color/md_theme_light_outline"
-                            android:textSize="@dimen/font_14" />
+                            style="@style/generalTextHintStyle"
+                            android:text="@string/username_desc" />
 
                         <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
@@ -182,20 +165,12 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="@string/bio"
-                                android:textColor="@color/md_theme_light_onPrimary"
-                                android:textSize="@dimen/font_16" />
+                                style="@style/generalTextSubtitleStyle"
+                                android:text="@string/bio" />
 
                             <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="@string/bio_desc"
-                                android:textColor="@color/md_theme_light_outline"
-                                android:textSize="@dimen/font_14" />
+                                style="@style/generalTextHintStyle"
+                                android:text="@string/bio_desc" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -212,104 +187,72 @@
                     android:text="@string/settings" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextSubtitleStyle"
                     android:drawablePadding="@dimen/margin_16"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/notifications_and_sounds"
-                    android:textColor="@color/md_theme_light_onPrimary"
-                    android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_notifications"
                     app:drawableTint="@color/md_theme_light_outline" />
 
                 <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextSubtitleStyle"
                     android:drawablePadding="@dimen/margin_16"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/privacy_and_security"
-                    android:textColor="@color/md_theme_light_onPrimary"
-                    android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_lock"
                     app:drawableTint="@color/md_theme_light_outline" />
 
                 <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextSubtitleStyle"
                     android:drawablePadding="@dimen/margin_16"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/data_and_storage"
-                    android:textColor="@color/md_theme_light_onPrimary"
-                    android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_storage"
                     app:drawableTint="@color/md_theme_light_outline" />
 
                 <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextSubtitleStyle"
                     android:drawablePadding="@dimen/margin_16"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/chat_settings"
-                    android:textColor="@color/md_theme_light_onPrimary"
-                    android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_chat"
                     app:drawableTint="@color/md_theme_light_outline" />
 
                 <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextSubtitleStyle"
                     android:drawablePadding="@dimen/margin_16"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/stickers_and_emoji"
-                    android:textColor="@color/md_theme_light_onPrimary"
-                    android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_emoji"
                     app:drawableTint="@color/md_theme_light_outline" />
 
                 <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextSubtitleStyle"
                     android:drawablePadding="@dimen/margin_16"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/chat_folders"
-                    android:textColor="@color/md_theme_light_onPrimary"
-                    android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_folder"
                     app:drawableTint="@color/md_theme_light_outline" />
 
                 <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextSubtitleStyle"
                     android:drawablePadding="@dimen/margin_16"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/devices"
-                    android:textColor="@color/md_theme_light_onPrimary"
-                    android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_devices"
                     app:drawableTint="@color/md_theme_light_outline" />
 
                 <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextSubtitleStyle"
                     android:drawablePadding="@dimen/margin_16"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/language"
-                    android:textColor="@color/md_theme_light_onPrimary"
-                    android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_language"
                     app:drawableTint="@color/md_theme_light_outline" />
 
@@ -320,13 +263,9 @@
                 android:layout_marginTop="@dimen/margin_8">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextSubtitleStyle"
                     android:drawablePadding="@dimen/margin_16"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/telegram_premium"
-                    android:textColor="@color/md_theme_light_onPrimary"
-                    android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_star"
                     app:drawableTint="@color/telegram_premium_star_color" />
             </LinearLayout>
@@ -341,39 +280,27 @@
                     android:text="@string/help" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextSubtitleStyle"
                     android:drawablePadding="@dimen/margin_16"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/ask_a_question"
-                    android:textColor="@color/md_theme_light_onPrimary"
-                    android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_notifications"
                     app:drawableTint="@color/md_theme_light_outline" />
 
                 <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextSubtitleStyle"
                     android:drawablePadding="@dimen/margin_16"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/telegram_faq"
-                    android:textColor="@color/md_theme_light_onPrimary"
-                    android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_question_mark"
                     app:drawableTint="@color/md_theme_light_outline" />
 
                 <com.google.android.material.divider.MaterialDivider style="@style/dividerStyle" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextSubtitleStyle"
                     android:drawablePadding="@dimen/margin_16"
-                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/privacy_policy"
-                    android:textColor="@color/md_theme_light_onPrimary"
-                    android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_police"
                     app:drawableTint="@color/md_theme_light_outline" />
 
