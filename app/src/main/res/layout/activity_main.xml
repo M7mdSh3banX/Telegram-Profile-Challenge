@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_view"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/md_theme_light_onBackground"
@@ -119,9 +119,9 @@
         app:layout_constraintTop_toBottomOf="@id/app_bar_container"
         app:shapeAppearanceOverlay="@style/floatingActionButtonStyle" />
 
-    <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="match_parent"
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/zero_dimens"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -130,6 +130,7 @@
         app:layout_constraintTop_toBottomOf="@id/app_bar_container">
 
         <LinearLayout
+            android:id="@+id/body_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -438,6 +439,6 @@
                 android:textSize="@dimen/font_12" />
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

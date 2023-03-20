@@ -10,6 +10,7 @@
 
         </KeyFrameSet>
         <OnSwipe
+            motion:dragDirection="dragUp"
             motion:touchAnchorId="@+id/app_bar_container"
             motion:touchAnchorSide="bottom" />
     </Transition>
@@ -83,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/zero_dimens"
             motion:layout_constraintBottom_toBottomOf="@id/profile_pic"
-            motion:layout_constraintStart_toStartOf="@id/profile_name" >
+            motion:layout_constraintStart_toStartOf="@id/profile_name">
             <CustomAttribute
                 motion:attributeName="textSize"
                 motion:customFloatValue="14" />
