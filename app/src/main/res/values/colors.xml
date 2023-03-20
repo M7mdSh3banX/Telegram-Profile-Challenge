@@ -5,7 +5,7 @@
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
     <color name="md_theme_light_primaryContainer">#D5E3FF</color>
     <color name="md_theme_light_onPrimaryContainer">#001B3C</color>
-    <color name="md_theme_light_secondary">#00658F</color>
+    <color name="md_theme_light_secondary">#1D2733</color>
     <color name="md_theme_light_onSecondary">#FFFFFF</color>
     <color name="md_theme_light_secondaryContainer">#C7E7FF</color>
     <color name="md_theme_light_onSecondaryContainer">#001E2E</color>
@@ -35,7 +35,7 @@
     <color name="md_theme_dark_onPrimary">#003061</color>
     <color name="md_theme_dark_primaryContainer">#004689</color>
     <color name="md_theme_dark_onPrimaryContainer">#D5E3FF</color>
-    <color name="md_theme_dark_secondary">#85CFFF</color>
+    <color name="md_theme_dark_secondary">#1D2733</color>
     <color name="md_theme_dark_onSecondary">#00344C</color>
     <color name="md_theme_dark_secondaryContainer">#004C6C</color>
     <color name="md_theme_dark_onSecondaryContainer">#C7E7FF</color>
@@ -61,4 +61,5 @@
     <color name="md_theme_dark_surfaceTint">#A7C8FF</color>
     <color name="md_theme_dark_outlineVariant">#43474E</color>
     <color name="md_theme_dark_scrim">#000000</color>
+    <color name="telegram_premium_star_color">#9C27B0</color>
 </resources>

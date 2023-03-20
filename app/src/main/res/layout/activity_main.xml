@@ -123,21 +123,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/app_bar_container">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#1D2733"
-                android:orientation="vertical"
-                android:padding="@dimen/margin_16">
+            <LinearLayout style="@style/generalLinearLayoutStyle">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="@string/account"
-                    android:textColor="@color/md_theme_light_tertiary"
-                    android:textSize="@dimen/font_16"
-                    android:textStyle="bold" />
+                    style="@style/generalTextTitleStyle"
+                    android:text="@string/account" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -213,23 +203,13 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_8"
-                android:background="#1D2733"
-                android:orientation="vertical"
-                android:padding="@dimen/margin_16">
+                style="@style/generalLinearLayoutStyle"
+                android:layout_marginTop="@dimen/margin_8">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextTitleStyle"
                     android:layout_marginBottom="@dimen/margin_8"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="@string/settings"
-                    android:textColor="@color/md_theme_light_tertiary"
-                    android:textSize="@dimen/font_16"
-                    android:textStyle="bold" />
-
+                    android:text="@string/settings" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -336,12 +316,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_8"
-                android:background="#1D2733"
-                android:orientation="vertical"
-                android:padding="@dimen/margin_16">
+                style="@style/generalLinearLayoutStyle"
+                android:layout_marginTop="@dimen/margin_8">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -352,27 +328,17 @@
                     android:textColor="@color/md_theme_light_onPrimary"
                     android:textSize="@dimen/font_16"
                     app:drawableStartCompat="@drawable/ic_star"
-                    app:drawableTint="#9C27B0" />
+                    app:drawableTint="@color/telegram_premium_star_color" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_8"
-                android:background="#1D2733"
-                android:orientation="vertical"
-                android:padding="@dimen/margin_16">
+                style="@style/generalLinearLayoutStyle"
+                android:layout_marginTop="@dimen/margin_8">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/generalTextTitleStyle"
                     android:layout_marginBottom="@dimen/margin_8"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="@string/help"
-                    android:textColor="@color/md_theme_light_tertiary"
-                    android:textSize="@dimen/font_16"
-                    android:textStyle="bold" />
-
+                    android:text="@string/help" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -422,6 +388,7 @@
                 android:text="@string/footer_sentence"
                 android:textColor="@color/md_theme_light_outline"
                 android:textSize="@dimen/font_12" />
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
